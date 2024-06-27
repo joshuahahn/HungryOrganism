@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>{% block title %} Joshua Hahn {% endblock %}</title>
+</head>
+
+<body>
+    <main>
+        <div class="container main-page mx-0">
+            <div class="row">
+                <div class="col-md-3 ml-5">
+                    <div class="name-header">
+                        <a href="/" class="nav-link-text">Joshua Hahn</a>
+                    </div>
+                    <br>
+                    <div class="nav-page">
+                        <a href="/favorite-albums" class="nav-link-text">favorite albums</a>
+                    </div>
+                    <br>
+                    <div class="nav-page">
+                        <a href="/album-a-day" class="nav-link-text">album-a-day</a>
+                    </div>
+                    <br>
+                    <div class="nav-page">
+                        <a href="/projects" class="nav-link-text">projects</a>
+                    </div>
+                    <br>
+                    <div class="nav-page">
+                        <a href="https://github.com/joshuahahn" class="nav-link-text">github</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8 mt-5 ml-5">
+                    <br><br><br>
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
